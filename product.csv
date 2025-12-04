@@ -1,0 +1,37 @@
+id,name,description, price,sale_price,quantity,image, category,type
+1,Samsung Phone,Samsung smartphone 32gb storage ,33499.0,25099.0,10,1.png,smartphone,samsung
+2,iphone 7 ,iphone 7 32gb,67100.0,58699.0,10,2.png,smartphone,iphone
+3,iphone 8,iphone 8 32gb,75400.0,67099.0 ,10,3.png,smartphone,iphone
+4,samsung 8,samsung 8 32gb,60000.0,58699.0,10,4.png ,smartphone,samsung
+5,panasonic 9,panasonic 9 32gb,75500.0,58699.0,10,5.png,smartphone,panasonic
+6,ig 8 ,ig 8 32gb,67100.0,58999.0 ,10,6.png ,smartphone,ig
+7,Honor 9 Lit,Honor 9 Lite (Sapphire Blue )(64 GB) (4 GB RAM),14499.0,12999.0 ,10,image-1.jpeg,smartphone,Honor
+8,Infinix Hot S3,Infinix Hot S3 (Sandstone Black)(32 GB) (3 GB RAM),8999.0,6599.0,10,image-2.jpeg,smartphone,Infinix
+9,Vivo V9 Youth,Vivo V9 Youth (Gold)(32 GB) (4 GB RAM),16990.0,14599.0,10,image-3.jpeg ,smartphone,Vivo
+10,Moto E4 Plus ,Moto E4 Plus (Fine Gold)(32 GB) (3 GB RAM) ,11499.0 ,9999.0 ,10,image-4.jpeg ,smartphone,Moto
+11,Lenovo K8 Plus,Lenovo K8 Plus (Venom Black)(32 GB) (3 GB RAM) ,9999.0 ,8499.0,10,image-5.jpg ,smartphone,Lenovo
+12,Samsung Galaxy On Nxt,Samsung Galaxy On Nxt (Gold)(16 GB) (3 GB RAM),10990.0 ,9499.0,10,image-6.jpeg,smartphone,Samsung
+13,Moto C Plus ,Moto C Plus (Pearl White)(16 GB) (2 GB RAM),7799.0,6299.0 ,10,image-7.jpeg,smartphone,Moto
+14,Panasonic P77,Panasonic P77 (White)(16 GB) (1 GB RAM),5999.0 ,4999.0 ,10,image-8.jpeg,smartphone,Panasonic
+15,OPPO F5,OPPO F5 (Black)(64 GB) (6 GB RAM) ,21499.0 ,19990.0,10,image-9.jpeg,smartphone,OPPO
+16,Honor 7A ,Honor 7A (Gold)(32 GB) (3 GB RAM),8999.0 ,7999.0 ,10,image-10.jpeg,smartphone,Honor
+17,Asus ZenFone 5Z,Asus ZenFone 5Z (Midnight Blue)(64 GB) (6 GB RAM),29999.0 ,27999.0,10,image-11.jpeg,smartphone,Asus
+18,Redmi 5A,Redmi 5A (Gold)(32 GB) (3 GB RAM) ,5999.0 ,4999.0,10,image-12.jpeg,smartphone,MI
+19,Intex Indie 5 ,Intex Indie 5 (Black)(16 GB) (2 GB RAM),4999.0 ,4499.0,10,image-13.jpeg,smartphone,Intex
+20,Google Pixel 2 XL,Google Pixel 2 XL (18:9 Display)(64 GB) White,61990.0 ,59999.0,10,image-14.jpeg,smartphone,Google
+21,Samsung Galaxy A9,Samsung Galaxy A9(Black)(128GB) (8GB RAM),36000.0 ,34999.0,10,image-15.jpeg,smartphone,Samsung
+22,Lenovo A5 ,Lenovo A5(Red)(16GB) (2GB RAM),5999.0 ,4999.0,10,image-16.jpeg,smartphone,Lenovo
+23,Asus Zenfone Lite L1,Asus Zenfone Lite L1(Grey)(16GB) (2GB RAM),5999.0 ,4999.0,10,image-17.jpeg,smartphone,Asus
+24,Lenovo K9,Lenovo K9 (Night Black)(32 GB) (3 GB RAM),8999.0 ,7999.0 ,10,image-18.jpeg,smartphone,Lenovo
+25,Infinix Hot S3x ,Infinix Hot S3x(Blue)(32GB) (3GB RAM),9999.0 ,8999.0,10,image-19.jpeg,smartphone,Infinix
+26,Realme 2 ,Realme 2(Red)(64GB) (4GB RAM),8990.0 ,7990.0,10,image-20.jpeg,smartphone,Realme
+27,Redmi Note 6 Pro ,Redmi Note 6 Pro(Gold)(64GB) (4GB RAM) ,13999.0 ,12499.0 ,10,image-21.jpeg,smartphone,MI
+28,Realme C1,Realme C1(Graphite Black)(16GB) (2GB RAM) ,7999.0 ,7499.0 ,10,image-22.jpeg,smartphone,Realme
+29,Vivo V11,Vivo V11(White)(64GB) (6GB RAM) ,22900.0 ,20999.0 ,10,image-23.jpeg,smartphone,Vivo
+30,Oppo F9 Pro,Oppo F9 Pro(Sky Blue)(64GB) (6GB RAM) ,23990.0 ,21990.0,10,image-24.jpg,smartphone,Oppo
+31,Honor 9N,Honor 9N(Black)(64GB) (4GB RAM),11999.0 ,10999.0,10,image-25.jpg,smartphone,Honor
+32,Redmi 6A,Redmi 6A(Gold)(16GB) (2GB RAM) ,6599.0 ,5599.0,10,image-26.jpeg,smartphone,MI
+33,InFocus Vision 3,InFocus Vision 3(Black)(16GB) (2GB RAM),7399.0 ,6499.0,10,image-27.jpeg,smartphone,InFocus
+34,Vivo Y69,Vivo Y69(White)(32GB) (3GB RAM),11390.0 ,10990.0,10,image-28.jpeg,smartphone,Vivo
+35,Honor 7x,Honor 7x(Dark Blue)(32GB) (4GB RAM),12799.0 ,11499.0,10,image-29.jpeg,smartphone,Honor
+36,Nokia 2.1,Nokia 2.1(Dark Black)(2GB) (1GB RAM),6580.0 ,3999.0 ,10,image-30.jpeg,smartphone,Nokia

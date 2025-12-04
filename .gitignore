@@ -1,0 +1,34 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Logs
+logs
+*.log
+log.txt
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Temp files
+*.tmp
+*.swp
+
+# React/Vite
+*.cache
+.cache/
+vite.config.ts.timestamp*

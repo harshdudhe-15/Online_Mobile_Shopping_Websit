@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PingShop online shopping website</title>
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+    <div>
+        <img src="images/logo.jpg" class="logo">
+    </div>
+    <h1>Your Cart</h1>
+    <% if (cart && cart.length > 0) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Sale Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% cart.forEach(function(item, index) { %>
+                <tr>
+                    <td><img src="images/<%= item.image %>" alt="<%= item.name %>" width="50" height="50"></td>
+                    <td><%= item.name %><br><%= item.description  %></td>
+                    <td>₹<%= item.price %></td>
+                    <td>₹<%= item.sale_price %></td>
+                    <td>
+                        <button class="quantity-btn" onclick="updateQuantity('<%= item.id %>', -1)">-</button>
+                        <span id="quantity-<%= item.id %>"><%= item.quantity %></span>
+                        <button class="quantity-btn" onclick="updateQuantity('<%= item.id %>', 1)">+</button>
+                    </td>                    
+                    <td id="item-total-<%= item.id %>">₹<%= item.quantity * (item.sale_price || item.price) %></td>
+                    <td>
+                        <form action="/remove_from_cart" method="POST" style="display:inline;">
+                            <input type="hidden" name="id" value="<%= item.id %>">
+                            <button type="submit" class="remove-btn" onclick="remove_item('<%= item.product_id %>')">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <div class="cart-total">
+        <h2>Total: ₹<span id="cart-total"><%= total %></span></h2>
+    </div>
+
+    <div class="cart-actions">
+        <button onclick="window.location.href='/products'" class="continue-btn">Continue Shopping</button>
+        <button onclick="window.location.href='/checkout'" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+    <% } else { %>
+        <!--<p>Your cart is empty.</p>-->
+        <img src="images/empty-cart.png" width="40%" height="40%">
+        <button onclick="window.location.href='/products'" class="continue-btn">Add Products</button>
+    <% } %>
+    <script>
+        function updateQuantity(item_id, change) {
+            // Get the current quantity from the page
+            let quantityElement = document.getElementById(`quantity-${item_id}`);
+            let currentQuantity = parseInt(quantityElement.textContent);
+        
+            // Prevent the quantity from going below 1
+            let newQuantity = currentQuantity + change;
+            if (newQuantity < 1) {
+                return; // Optionally you could remove the item if the quantity is 0.
+            }   
+
+            // Update the quantity on the page
+            quantityElement.textContent = newQuantity;
+
+            // Send an AJAX request to update the quantity on the server
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/update_cart', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Optionally handle response (like updating total price)
+                    let response = JSON.parse(xhr.responseText);
+                    // Update the overall cart total
+                    document.getElementById('cart-total').textContent = response.total;
+                    // Update the item row total
+                    let itemTotalElement = document.getElementById(`item-total-${item_id}`);
+                    itemTotalElement.textContent = `₹${response.itemTotal}`;
+                }
+            };
+            xhr.send(`id=${item_id}&quantity=${newQuantity}`);
+        }
+        function updateCartQuantity() {
+            fetch('/cart-quantity')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('cart-quantity').innerText = data.totalQuantity;
+            });
+        }
+        // Call this function when the page loads to get the current quantity
+        updateCartQuantity();
+        function remove_item(item_id)
+        {
+            if(confirm("Are you sure you want to remove it?"))
+            {
+                window.location.href = `/remove_item?id=${item_id}`;
+            }
+        }    
+    </script>
+</body>
+</html>

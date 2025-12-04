@@ -1,0 +1,24 @@
+{
+  "name": "online_shopping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "body-parser": "^1.20.2",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "els": "^0.1.0-alpha",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.11.0",
+    "pg": "^8.16.3",
+    "request": "^2.88.2"
+  }
+}
